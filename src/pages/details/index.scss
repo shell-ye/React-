@@ -1,0 +1,186 @@
+@import 'Assets/css/theme.scss';
+@import 'Assets/css/border.scss';
+
+#details {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: scroll;
+
+    // 头部详情
+    div.head {
+        height: 1.88rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        div.mask {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+        }
+        div.background {
+            filter: blur(1.2rem);
+            z-index: -1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: .55;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        img {
+            width: 1.10rem;
+            height: 1.5rem;
+            margin-left: .2rem;
+        }
+        div.info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            height: 70%;
+            margin-top: .4rem;
+            margin-bottom: .4rem;
+            margin-left: .125rem;
+            color: white;
+            flex: 1;
+            p.title {
+                font-weight: bold;
+                font-size: .2rem;
+            }
+            p.precent {
+                font-weight: bold;
+                color: #ffcc00;
+                font-size: .18rem;
+            }
+            p.score, p.district, p.publish {
+                font-size: .12rem;
+                margin-top: .1rem;
+            }
+            p.score {
+                width: 100%;
+                span {
+                    &.version {
+                        width: .44rem;
+                        height: .14rem;
+                        display: inline-block;
+                        background-size: cover!important;
+                        margin-left: .04rem;
+                    }
+                    &.two {
+                        background: url('~Assets/img/2DMAX.png');
+                    }
+                    &.three {
+                        background: url('~Assets/img/3DMAX.png');
+                    }
+                }
+            }
+        }
+    }
+
+    // 选择日趋
+    ul.date {
+        display: flex;
+        overflow-x: auto;
+        height: .45rem;
+        box-sizing: border-box;
+        padding: 0 .5%;
+        li {
+            width: 33%;
+            height: 80%;
+            text-align: center;
+            font-size: .14rem;
+            display: inline-block;
+            flex: none;
+            line-height: .4rem;
+            transition: .2s;
+            border-bottom: 2px solid transparent;
+            color: #666;
+            &.active {
+                border-color:$ThemeRed;
+                color: $ThemeRed;
+            }
+        }
+    }
+
+    // 影院列表
+    ul.cinema {
+        flex: 1;
+        overflow: scroll;
+        li {
+            box-sizing: border-box;
+            padding: .13rem .15rem;
+            height: 1.42rem;
+            border-bottom: 1px solid #ccc;
+            &.no-data {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                border: none;
+                color: #666;
+            }
+            p.title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: .12rem;
+                span {
+                    &:nth-child(1) {
+                        color: #000;
+                        line-height: .23rem;
+                        font-size: .18rem;
+                    }
+                    &:last-child {
+                        color: #f03d37;
+                        font-size: .16rem;
+                    }
+                }
+            }
+            p.addr {
+                font-size: .15rem;
+                color: #666;
+            }
+            p.tags {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                box-sizing: border-box;
+                margin: .06rem 0;
+                span {
+                    margin-right: .07rem;
+                    display: inline-block;
+                    padding: 0 .05rem;
+                    height: .17rem;
+                    line-height: .17rem;
+                    border-radius: .04rem;
+                    font-size: .14rem;
+                    border: 1px solid #ccc;
+                }
+            }
+            p.card {
+                img {
+                    width: .14rem;
+                    height: .14rem;
+                }
+                span {
+                    font-size: .13rem;
+                    margin-left: .07rem;
+                    color: #999;
+                }
+            }
+            p.show-times {
+                color: #999;
+                font-size: .14rem;
+                margin-top: .04rem;
+            }
+        }
+    }
+}

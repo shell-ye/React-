@@ -1,0 +1,42 @@
+@import 'Assets/css/theme.scss';
+@import 'Assets/css/border.scss';
+
+#tab-bar {
+    @include border(#666, 1px 0 0 0);
+    width: 100%;
+    height: .488rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+        flex: 1;
+        height: 100%;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #696969;
+            outline: none;
+            transition: .2s;
+            i {
+                font-size: .26rem;
+                margin-bottom: .02rem;
+                transition: .2s;
+            }
+            span {
+                font-size: .1rem;
+                transition: .2s;
+            }
+            &.active {
+                color: $ThemeRed;
+                i {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}

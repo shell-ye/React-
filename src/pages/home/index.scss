@@ -1,0 +1,60 @@
+@import 'Assets/css/theme.scss';
+@import 'Assets/css/border.scss';
+
+#home {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    // 导航
+    .nav {
+        @include border(#666, 0 0 1px 0);
+        width: 100%;
+        height: .45rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > span {
+            font-size: .15rem;
+            color: #666;
+            margin-left: .15rem;
+        }
+        div {
+            height: 100%;
+            width: 1.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                color: #666;
+                font-size: .15rem;
+                padding-bottom: .02rem;
+                border-bottom: 4px solid transparent;
+                &.active {
+                    color: $ThemeRed;
+                    font-weight: bold;
+                    border-color: $ThemeRed;
+                }
+            }
+        }
+        i {
+            font-size: .2rem;
+            color: $ThemeRed;
+            margin-right: .15rem;
+        }
+    }
+
+    // 两个列表
+    .home-hot, .home-comming{
+        flex: 1;
+        overflow: scroll;
+        li {
+            &.bottom {
+                text-align: center;
+                box-sizing: border-box;
+                padding: .06rem;
+                background: #eee;
+            }
+        }
+    }
+}

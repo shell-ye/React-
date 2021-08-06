@@ -1,0 +1,49 @@
+@import 'Assets/css/theme.scss';
+
+.search-cinema-row {
+    height: 1.08rem;
+    box-sizing: border-box;
+    padding: .15rem;
+    p.title {
+        span {
+            &:first-child {
+                font-size: .18rem;
+                color: #000;
+            }
+            &:nth-child(2) {
+                margin-left: .12rem;
+                font-size: .19rem;
+                color: $ThemeRed;
+            }
+            &:nth-child(3) {
+                font-size: .13rem;
+                color: #999;
+                white-space: nowrap;
+                margin-left: .02rem;
+            }
+        }
+    }
+    p.addr {
+        font-size: .15rem;
+        color: #999;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: .1rem 0;
+    }
+    p.tags {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        span {
+            margin-right: .07rem;
+            display: inline-block;
+            padding: 0 .05rem;
+            height: .17rem;
+            line-height: .17rem;
+            border-radius: .04rem;
+            font-size: .14rem;
+            border: 1px solid #ccc;
+        }
+    }
+}

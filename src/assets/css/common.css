@@ -1,0 +1,8 @@
+* {
+    font-size: .16rem;
+}
+
+.page-content {
+    flex: 1;
+    overflow: hidden;
+}

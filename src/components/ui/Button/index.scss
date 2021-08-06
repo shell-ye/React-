@@ -1,0 +1,15 @@
+@import 'Assets/css/theme.scss';
+
+.maoyan-button {
+    display: inline-block;
+    width: .47rem;
+    height: .27rem;
+    background: $ThemeRed;
+    color: white;
+    font-size: .12rem;
+    border-radius: .04rem;
+    border: none;
+    &.orange {
+        background: #faaf00;
+    }
+}

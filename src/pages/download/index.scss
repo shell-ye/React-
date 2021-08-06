@@ -1,0 +1,20 @@
+#download {
+    background: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    img {
+        width: 100%;
+    }
+    button {
+        width: 3.68rem;
+        height: .48rem;
+        line-height: .40rem;
+        background-color: #ffbd00;
+        border-radius: .16rem;
+        border: none;
+        color: white;
+        margin-top: .2rem;
+    }
+}

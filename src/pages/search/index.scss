@@ -1,0 +1,71 @@
+@import 'Assets/css/border.scss';
+@import 'Assets/css/theme.scss';
+
+#search {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    // 搜索框
+    .search-input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: .48rem;
+        width: 100%;
+        background-color: #f5f5f5;
+        position: relative;
+        @include border(#e5e5e5, 0 0 1px 0);
+        input {
+            width: 3.13rem;
+            height: .3rem;
+            background: white;
+            font-size: .13rem;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+            padding-left: .3rem;
+            margin-right: .1rem;
+        }
+        i {
+            position: absolute;
+            left: .2rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    // 列表
+    div.list {
+        flex: 1;
+        background: #f5f5f5;
+        overflow: scroll;
+        > div {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            background: white;
+            > p {
+                height: .4rem;
+                font-size: .15rem;
+                color: #999;
+                padding: .09rem .15rem;
+                box-sizing: border-box;
+                line-height: .26rem;
+            }
+            ul {
+                @include border(#666, 1px 0 1px 0);
+            }
+            a {
+                height: .44rem;
+                text-align: center;
+                color: $ThemeRed;
+                line-height: .44rem;
+            }
+
+            // 电影列表
+            &.movie-list {
+                margin-bottom: .2rem;
+            }
+        }
+    }
+}

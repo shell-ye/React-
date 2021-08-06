@@ -1,0 +1,52 @@
+#short-video {
+    display: flex;
+    justify-self: flex-start;
+    flex-wrap: wrap;
+    overflow: scroll;
+    li {
+        width: 50%;
+        height: 3rem;
+        background-size: cover;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        color: white;
+        > div {
+            width: 100%;
+            box-sizing: border-box;
+            padding: .05rem .1rem;
+        }
+        div.title {
+            text-align: left;
+        }
+        div.user {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p.info {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                img {
+                    height: .215rem;
+                    width: .215rem;
+                    border-radius: 50%;
+                    margin-right: .04rem;
+                }
+                span {
+                    display: inline-block;
+                    width: 1rem;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+            p.fabulous {
+                i {
+                    margin-right: .04rem;
+                }
+            }
+        }
+    }
+}

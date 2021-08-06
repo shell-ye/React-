@@ -1,0 +1,20 @@
+#mine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+        box-sizing: border-box;
+        padding: 0 .4rem;
+        font-size: .18rem;
+        line-height: .24rem;
+        text-align: center;
+        letter-spacing: .02rem;
+        margin-bottom: .2rem;
+    }
+    button {
+        width: 1.46rem;
+        height: .4rem;
+        font-size: .16rem;
+    }
+}

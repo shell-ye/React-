@@ -1,0 +1,61 @@
+@import 'Assets/css/theme.scss';
+
+.home-movies-row {
+    width: 100%;
+    height: 1.14rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: .15rem;
+    img {
+        margin-right: .1rem;
+        width: .64rem;
+        height: .98rem;
+    }
+    > div {
+        font-size: .13rem;
+        color: #666;
+        position: relative;
+        flex: 1;
+        p {
+            margin: .06rem 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 2.1rem;
+            &.title {
+                font-weight: bold;
+                font-size: .20rem;
+                color: #333;
+                margin-bottom: .1rem;
+            }
+            span {
+                &.version {
+                    width: .44rem;
+                    height: .14rem;
+                    display: inline-block;
+                    background-size: cover!important;
+                    margin-left: .04rem;
+                }
+                &.two {
+                    background: url('~Assets/img/2DMAX.png');
+                }
+                &.three {
+                    background: url('~Assets/img/3DMAX.png');
+                }
+                &.sc {
+                    color: #faaf00;
+                    font-weight: bold;
+                    font-size: .15rem;
+                }
+            }
+        }
+        button {
+            position: absolute;
+            top: 50%;
+            right: .2rem;
+            transform: translateY(-50%);
+        }
+    }
+}

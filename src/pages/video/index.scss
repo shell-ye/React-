@@ -1,0 +1,120 @@
+@import 'Assets/css/theme.scss';
+
+#video {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    // 子导航
+    ul.nav {
+        height: .46rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li {
+            flex: 1;
+            text-align: center;
+            line-height: 1;
+            font-size: .14rem;
+            line-height: .42rem;
+            color: #333;
+            transition: .2s;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                width: .3rem;
+                height: .04rem;
+                background: transparent;
+            }
+            &.active {
+                font-size: .18rem;
+                &::after {
+                    background: $ThemeRed;
+                }
+            }
+        }
+    }
+
+
+    // 视频列表
+    ul.video-list {
+        overflow: scroll;
+        li {
+            height: 2.57rem;
+            width: 100%;
+            margin-bottom: .2rem;
+            div.content {
+                height: 2.11rem;
+                width: 100%;
+                position:relative;
+                overflow: hidden;
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                p.title {
+                    z-index: 2;
+                    color: white;
+                    position: relative;
+                    font-size: .20rem;
+                    letter-spacing: 0;
+                    line-height: .3rem;
+                    margin: .1rem .1rem .38rem;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    text-overflow: ellipsis;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                    overflow: hidden;
+                }
+            }
+            div.info {
+                height: .46rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-sizing: border-box;
+                padding: 0 .15rem;
+                background: white;
+                p.user {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    img {
+                        width: .22rem;
+                        height: .22rem;
+                        border-radius: 50%;
+                    }
+                    span {
+                        margin-left: .1rem;
+                        font-size: .18rem;
+                        color: #666;
+                    }
+                }
+                p.operation {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    span {
+                        font-size: .14rem;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin-left: .1rem;
+                        i {
+                            font-size: .2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

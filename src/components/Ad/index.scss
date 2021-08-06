@@ -1,0 +1,37 @@
+@import 'Assets/css/theme.scss';
+@import 'Assets/css/border.scss';
+
+#ad {
+    @include border(#666, 0 0 1px 0);
+    height: .64rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 .15rem;
+    img {
+        width: .94rem;
+        height: .39rem;
+    }
+    p {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        span {
+            &:nth-child(1) {
+                font-size: .14rem;
+                color: #666;
+            }
+            &:nth-child(2) {
+                font-weight: bold;
+                font-size: .16rem;
+                color: $ThemeRed;
+                margin-left: .04rem;
+                i {
+                    margin-left: .04rem;
+                }
+            }
+        }
+    }
+}
